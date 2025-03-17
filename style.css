@@ -1,0 +1,396 @@
+@charset "UTF-8";
+
+body {
+    font-size: 0.8rem;
+    color: #333;
+    min-height: 100vh;
+    position: relative;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1360px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+a {
+    transition: all 0.5s;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+/* --------------------
+header
+-------------------- */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    right: 0;
+    left: 0;
+    height: 80px;
+    align-items: center;
+    z-index: 10;
+    background-color: #fff;
+}
+
+.logo img {
+    width: 190px;
+    line-height: 1px;
+    display: block;
+}
+
+.navi {
+    position: fixed;
+    top: 0;
+    /* left: 0; */
+    left: -300px;
+    width: 300px;
+    color: #fff;
+    padding: 36px 50px;
+    transition: all 0.5s;
+    z-index: 20;
+    opacity: 0;
+}
+
+.navi a {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.navi-li {
+    margin-bottom: 14px;
+}
+
+.open .navi {
+    left: 0;
+    opacity: 1;
+}
+
+.toggle_btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.toggle_btn span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    border-radius: 4px;
+    transition: all 0.5s;
+}
+
+.toggle_btn span:nth-child(1) {
+    top: 10px;
+}
+
+.toggle_btn span:nth-child(2) {
+    bottom: 10px;
+}
+
+.open .toggle_btn span {
+    background-color: #fff;
+}
+
+.open .toggle_btn span:nth-child(1) {
+    transform: translateY(4px) rotate(-45deg);
+}
+
+.open .toggle_btn span:nth-child(2) {
+    transform: translateY(-4px) rotate(45deg);
+}
+
+#mask {
+    display: none;
+    transition: all 0.5s;
+}
+
+.open #mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    z-index: 10;
+    cursor: pointer;
+}
+
+
+
+/* -----------------------
+main
+----------------------- */
+
+.main-content {
+    padding-top: 80px;
+    padding-bottom: 160px;
+}
+
+.main-ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+}
+
+.main-li img {
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+
+.main-item-text {
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+.link-text {
+    display: block;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 0.85rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+}
+
+.footer-ul {
+    display: flex;
+}
+
+.footer-li {
+    padding-right: 30px;
+    font-size: 0.75rem;
+}
+
+.copy {
+    font-size: 0.65rem;
+}
+
+
+
+
+
+
+/* ----------------------
+products
+---------------------- */
+
+.page-title {
+    padding: 30px 0;
+    font-size: 0.9rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.pagination-number {
+    padding: 0 20px;
+}
+
+
+
+/* ----------------------
+item
+---------------------- */
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+}
+
+.item-img {
+    width: 50%;
+}
+
+.item-img img {
+    max-width: 100%;
+}
+
+.item-text {
+    width: 43%;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.item-text p {
+    margin-bottom: 30px;
+}
+
+dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+dt {
+    font-weight: normal;
+    width: 30%;
+}
+
+dd {
+    width: 70%;
+}
+
+.item-back {
+    text-align: center;
+    padding-top: 80px;
+    font-size: 0.9rem;
+}
+
+
+
+
+/* ----------------------
+About
+---------------------- */
+
+.about-text {
+    max-width: 600px;
+    font-size: 0.9rem;
+    line-height: 1.9;
+}
+
+.about-text p {
+    padding-bottom: 30px;
+}
+
+
+
+
+/* ----------------------
+Company
+---------------------- */
+
+.company {
+    max-width: 600px;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.info {
+    padding-bottom: 30px;
+}
+
+.info dt {
+    padding: 20px 10px;
+    border-bottom: 1px solid #cccccc;
+    width: 30%;
+}
+
+.info dd {
+    padding: 20px 10px;
+    border-bottom: 1px solid #cccccc;
+    width: 70%;
+    line-height: 1.5;
+}
+
+.info dt:last-of-type {
+    border-bottom: none;
+}
+
+.info dd:last-of-type {
+    border-bottom: none;
+}
+.map iframe {
+    width: 600px;
+    height: 300px;
+    filter: grayscale(1);
+}
+
+
+
+
+/* ----------------------
+SP
+---------------------- */
+
+
+@media screen and (max-width: 900px) {
+
+/* ----------------------
+top
+---------------------- */
+    .main-ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer {
+        display: block;
+    }
+
+    .copy {
+        padding-top: 10px;
+    }
+
+
+/* ----------------------
+Company
+---------------------- */
+
+    .info {
+        flex-direction: column;
+    }
+
+    .info dt {
+        width: 100%;
+        border-bottom: none;
+        padding-bottom: 5px;
+    }
+
+    .info dd {
+        width: 100%;
+        padding-top: 5px;
+    }
+
+    .map iframe {
+        width: 100%;
+    }
+
+
+
+/* ----------------------
+Products
+---------------------- */
+
+    .item {
+        flex-direction: column;
+    }
+
+    .item-img {
+        width: 100%;
+    }
+
+    .item-text {
+        width: 100%;
+        padding-top: 30px;
+    }
+
+
+
+}
+
+
+
+
+
